@@ -9,7 +9,7 @@ const initialState: FilterState = {
   value: 'all',
 };
 
-export const filterSlice = createSlice({
+const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
@@ -19,4 +19,5 @@ export const filterSlice = createSlice({
   },
 });
 
-export default filterSlice.reducer;
+const filterSliceReducer = filterSlice.reducer;
+export default filterSliceReducer;

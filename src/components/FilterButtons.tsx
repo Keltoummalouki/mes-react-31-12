@@ -1,4 +1,4 @@
-import { setFilter } from '../store/filterSlice';
+import filterSliceReducer from "../store/filterSlice"
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import type { FilterValue } from '../types/todo';
 
@@ -22,7 +22,7 @@ const FilterButtons = () => {
               ? 'bg-white text-purple-600 shadow-lg scale-105 border-white' 
               : 'bg-white/10 text-white/80 hover:bg-white/20 border-white/20 hover:scale-105'
             }`}
-          onClick={() => dispatch(setFilter(filter.value))}
+          onClick={() => dispatch(filterSliceReducer(filter.value))}
         >
           {filter.label}
         </button>
