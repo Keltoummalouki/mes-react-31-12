@@ -17,10 +17,17 @@ const fetchTodos = (): Promise<Todo[]> => {
 };
 
 // Hook pour récupérer les todos
-export const useTodos = () => {};
+export const useTodos = () => {
+  console.log(fetchTodos)
+  return fetchTodos;
+};
 
 // Hook pour ajouter un todo
-export const useAddTodo = () => {};
+export const useAddTodo = (initialTodos : Todo[] ,newTodo ) => {
+  return initialTodos.push(newTodo);
+};
 
 // Hook pour basculer l'état completed d'un todo
-export const useToggleTodo = () => {};
+export const useToggleTodo = () => {
+  
+};
